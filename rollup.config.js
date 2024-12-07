@@ -31,6 +31,7 @@ export default [
     plugins: [
       babel({ babelHelpers: 'bundled' }),
       css({ output: 'synonym.css' })
-    ]
+    ],
+    external: ['quill']
   }
 ];

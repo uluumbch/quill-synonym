@@ -35,5 +35,8 @@
     "rollup": "^2.79.2",
     "rollup-plugin-css-only": "^4.5.2",
     "rollup-plugin-terser": "^7.0.2"
+  },
+  "peerDependencies": {
+    "quill": "^2.0.0"
   }
 }

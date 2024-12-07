@@ -1,7 +1,10 @@
 import './synonym.css';
+import Quill from 'quill';
+const Module = Quill.import('core/module');
 
-class Synonym {
+class Synonym extends Module {
     constructor(quill, options) {
+        super(quill, options);
         this.quill = quill;
         this.options = options;
         this.container = document.querySelector(options.container) ?? quill.container;
@@ -13,9 +16,20 @@ class Synonym {
         this.showDialog = this.showDialog.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.closeDialog = this.closeDialog.bind(this);
-        
-        this.quill.getModule('toolbar').addHandler('synonym', this.showDialog);
 
+        this.toolbar = quill.getModule('toolbar');
+    
+        // Add handler for the synonym button
+        if (typeof this.toolbar !== 'undefined') {
+            this.toolbar.addHandler('synonym', this.showDialog);
+        }
+
+        const synonymBtns = document.getElementsByClassName('ql-synonym');
+        if (synonymBtns) {
+            [].slice.call(synonymBtns).forEach((btn) => {
+                btn.innerHTML = options.buttonIcon;
+            });
+        }
     }
 
     setupDialog() {
@@ -109,6 +123,10 @@ class Synonym {
         this.dialog.querySelector('.ql-synonym-input').value = '';
     }
 }
+
+Synonym.DEFAULTS = {
+    buttonIcon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-chart-donut" version="1.1" id="svg3" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs3" /><path stroke="none" d="M 0,0 H 24 V 24 H 0 Z" fill="none" id="path1" /><path id="rect3" style="fill:none;stroke:#000000" d="M 6.4044018,0.9071231 2.1602611,5.1493106 V 20.682514 H 13.611433 V 0.9071231 Z" /><path id="rect4" style="fill:#000000;stroke:#000000" d="m 6.6314831,1.6137869 -3.763672,3.7617187 h 3.763672 z" /><text xml:space="preserve" style="fill:#000000;stroke:#000000" x="3.7842846" y="16.136419" id="text4"><tspan id="tspan4" x="3.7842846" y="16.136419">A</tspan></text><path id="path4" style="fill:none;stroke:#000000" d="M 13.611328,2.7851562 V 20.681641 H 9.140625 v 1.878906 H 20.591797 V 2.7851562 Z" /><path style="fill:#000000;stroke:#000000" d="m 14.645554,6.460414 4.355664,-0.0877" id="path5" /><path style="fill:#000000;stroke:#000000" d="m 14.645554,8.828258 4.355664,-0.0877" id="path6" /><path style="fill:#000000;stroke:#000000" d="m 14.645554,11.196102 4.355664,-0.0877" id="path7" /><path style="fill:#000000;stroke:#000000" d="m 14.645554,13.563946 4.355664,-0.0877" id="path8" /><path style="fill:#000000;stroke:#000000" d="m 14.645554,15.93179 4.355664,-0.0877" id="path9" /><path style="fill:#000000;stroke:#000000" d="m 14.645554,18.299634 4.355664,-0.0877" id="path10" /><path style="fill:#000000;stroke:#000000" d="m 14.645554,20.404384 4.355664,-0.0877" id="path11" /></svg>'
+};
 
 if (typeof window !== 'undefined' && window.Quill) {
     window.Quill.register('modules/synonym', Synonym);
