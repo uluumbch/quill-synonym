@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.0.1](https://github.com/uluumbch/quill-synonym/tree/v1.0.1) (2024-12-07)
+
+[Full Changelog](https://github.com/uluumbch/quill-synonym/compare/v1.0.0...v1.0.1)
+
 ## [v1.0.0](https://github.com/uluumbch/quill-synonym/tree/v1.0.0) (2024-12-07)
 
 [Full Changelog](https://github.com/uluumbch/quill-synonym/compare/e9ad23466615f87ba923119fe529145fe83e5ec0...v1.0.0)
