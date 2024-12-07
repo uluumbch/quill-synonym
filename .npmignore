@@ -1,0 +1,7 @@
+docs
+.cache
+.github
+.idea
+tests
+.npmrc
+.env
