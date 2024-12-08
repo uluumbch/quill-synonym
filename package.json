@@ -1,6 +1,6 @@
 {
   "name": "quill-synonym",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Quill.js module for finding and replacing words with synonyms",
   "main": "dist/synonym.esm.js",
   "style": "dist/synonym.css",
