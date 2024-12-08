@@ -11,7 +11,7 @@
   "scripts": {
     "build": "rollup -c",
     "prepare": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine-browser-runner runSpecs"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,8 @@
   "homepage": "https://github.com/uluumbch/quill-synonym#readme",
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.4",
+    "jasmine-browser-runner": "^2.5.0",
+    "jasmine-core": "^5.5.0",
     "rollup": "^2.79.2",
     "rollup-plugin-css-only": "^4.5.2",
     "rollup-plugin-terser": "^7.0.2"
