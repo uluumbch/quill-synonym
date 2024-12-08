@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.0.3](https://github.com/uluumbch/quill-synonym/tree/v1.0.3) (2024-12-08)
+
+[Full Changelog](https://github.com/uluumbch/quill-synonym/compare/v1.0.2...v1.0.3)
+
+**Implemented enhancements:**
+
+- Add testing [\#1](https://github.com/uluumbch/quill-synonym/issues/1)
+
 ## [v1.0.2](https://github.com/uluumbch/quill-synonym/tree/v1.0.2) (2024-12-08)
 
 [Full Changelog](https://github.com/uluumbch/quill-synonym/compare/v1.0.1...v1.0.2)
