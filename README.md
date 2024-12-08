@@ -36,6 +36,12 @@ const quill = new Quill('#editor', {
 
 ```
 
+## Demo
+
+![Demo](./docs/images/demo.gif)
+
+See the [demo](https://uluumbch.github.io/quill-synonym/demos/) for live examples.
+
 ## Features
 - Adds a synonym lookup button to the toolbar
 - Uses Datamuse API for synonym suggestions
