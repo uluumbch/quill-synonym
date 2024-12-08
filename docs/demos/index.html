@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synonym Finder</title>
+    <link rel="stylesheet" href="node_modules/quill-synonym/dist/synonym.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill-synonym/dist/synonym.css">
+</head>
+
+<body>
+    <div id="editor">
+        <p>Hello World!</p>
+        <p>Some initial <strong>bold</strong> text</p>
+        <p><br /></p>
+    </div>
+
+    <!-- Include the Quill library -->
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
+    
+     <script src="https://cdn.jsdelivr.net/npm/quill-synonym/dist/synonym.min.js"></script>
+    <!-- Initialize Quill editor -->
+    <script>
+        // No need to register the modules, it is automatically loaded
+
+        const toolbarOptions = {
+            container: [
+                ['bold', 'italic', 'underline', 'link'],
+                ['synonym'] // This will be handled by the synonym module
+            ]
+        };
+
+        const options = {
+            // debug: 'info',
+            modules: {
+                toolbar: {
+                    container: toolbarOptions.container,
+                    handlers: {
+                        synonym: () => {} // This is handled by the synonym module, but should be empty
+                    }
+                },
+                synonym: true, // specify module
+                // or use object to customize
+                /*synonym: {
+                     container: '#synonym',
+                     buttonIcon: '<svg><path d="M12 2L2 22h20L12 2z"></path></svg>'
+                 }*/
+            },
+            theme: 'snow'
+        };
+
+        const quill = new Quill('#editor', options);
+    </script>
+</body>
+
+</html>
