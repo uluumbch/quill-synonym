@@ -1,5 +1,5 @@
 # Quill Synonym Module
-
+<!-- GitAds-Verify: CRAQ1LR4D8B7JXTSKEAWH1H62KW68YV9 -->
 A Quill.js module that adds synonym lookup functionality to your editor.
 
 ## Installation
