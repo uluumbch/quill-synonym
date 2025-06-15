@@ -37,6 +37,8 @@ const quill = new Quill('#editor', {
 ```
 
 ## Demo
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=uluumbch/quill-synonym@github)](https://gitads.dev/v1/ad-track?source=uluumbch/quill-synonym@github)
+
 
 ![Demo](./docs/images/demo.gif)
 
